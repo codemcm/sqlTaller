@@ -100,5 +100,12 @@ INSERT INTO guest_event(guest_id,event_uc_id,created_by)
 INSERT INTO guest_event(guest_id,event_uc_id,created_by)
     VALUES (6,3,4);
 
+/* JOIN alumnos de SQL*/
 
-
+SELECT G.name AS Nombre, G.last_name AS Apellido, E.name AS Taller
+    FROM guest G 
+    INNER JOIN guest_event GE 
+    ON G.guest_id = GE.guest_id 
+    INNER JOIN event_uc E
+    ON GE.event_uc_id = E.event_uc_id
+    WHERE E.name = 'Taller SAP';
