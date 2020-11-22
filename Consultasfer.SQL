@@ -49,4 +49,56 @@ INSERT INTO event_uc(name,organizer_id,observations,created_by)
 INSERT INTO event_uc(name,organizer_id,observations,created_by)
     VALUES ('Taller Github',8,'Taller para aprender Github',2);
 
+1. identificar las tablas
+Organizer O
+Event_uc  E
+
+2. Identificar los campos de cada tabla.
+
+Organizer Name
+Event_uc Name,observations
+
+3. Identificar la realción
+Relacion organizer_id
+
+4. 
+
+SELECT O.name AS Organizador,E.name AS Evento,E.observations AS Detalles 
+    FROM Organizer O 
+    INNER JOIN event_uc E 
+    ON O.organizer_id = E.organizer_id
+
+Event_uc E
+User_uc  U
+
+User_uc Name
+Event_uc Name
+
+SELECT E.name AS Evento,U.user_name AS Creador
+    FROM Event_uc E 
+    INNER JOIN User_uc u
+    ON E.created_by = U.created_by
+
+
+SELECT O.name AS Organizador,E.name AS Evento,E.observations 
+    AS Detalles, U.user_name AS CREADOR
+    FROM Organizer O 
+    INNER JOIN event_uc E 
+    ON O.organizer_id = E.organizer_id 
+    INNER JOIN User_uc u
+    ON E.created_by = U.user_id  
+    WHERE u.user_id = 1
+
+
+guest 456
+
+
+INSERT INTO guest_event(guest_id,event_uc_id,created_by)
+    VALUES (4,3,2);
+INSERT INTO guest_event(guest_id,event_uc_id,created_by)
+    VALUES (5,3,3);
+INSERT INTO guest_event(guest_id,event_uc_id,created_by)
+    VALUES (6,3,4);
+
+
 
