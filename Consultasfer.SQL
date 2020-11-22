@@ -90,9 +90,10 @@ SELECT O.name AS Organizador,E.name AS Evento,E.observations
     WHERE u.user_id = 1
 
 
+
+
+Agregar a la tabla guest_event
 guest 456
-
-
 INSERT INTO guest_event(guest_id,event_uc_id,created_by)
     VALUES (4,3,2);
 INSERT INTO guest_event(guest_id,event_uc_id,created_by)
@@ -101,4 +102,16 @@ INSERT INTO guest_event(guest_id,event_uc_id,created_by)
     VALUES (6,3,4);
 
 
+
+guest G
+guest_event GE
+event_uc E
+
+SELECT G.name AS Invitado, E.Name
+FROM guest G
+INNER JOIN guest_event GE
+ON G.guest_id = GE.guest_id
+INNER JOIN event_uc E
+ON GE.event_uc_id = E.event_uc_id
+WHERE E.event_uc_id = 4
 
