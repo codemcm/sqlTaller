@@ -28,3 +28,27 @@ INSERT INTO organizer(name, created_by)
     VALUES ('Universidad de Oaxaca', 1);
 INSERT INTO organizer(name, created_by)
     VALUES ('Normal Superior', 1);
+
+//Stats
+
+INSERT INTO status_assistance(name)
+    VALUES ('ASISTENCIA');
+ INSERT INTO status_assistance(name)
+    VALUES ('INASISTENCIA');
+INSERT INTO status_assistance(name)
+    VALUES ('PERMISO');
+
+
+//USERS
+
+INSERT INTO user_uc (user_name, password, created_by)
+    VALUES ('Julio Lopez', "passwd", 1);
+INSERT INTO user_uc (user_name, password, created_by)
+    VALUES ('Carla Esparragoza', "date3date", 1);
+INSERT INTO user_uc (user_name, password, created_by)
+    VALUES ('Jorge Rodriguez', "AtThisTime", 1);
+INSERT INTO user_uc (user_name, password, created_by)
+    VALUES ('Ana Perez', "#saved#", 1);
+INSERT INTO user_uc (user_name, password, created_by)
+    VALUES ('Sofia Sanchez', "Negative2323", 1);
+
